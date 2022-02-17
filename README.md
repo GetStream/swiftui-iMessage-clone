@@ -1,3 +1,5 @@
+![Banner showing the name of the repository](banner.png)
+
 # iMessage clone with SwiftUI and the StreamChatSwiftUI SDK
 
 This repository contains the source code of the tutorial series on how to re-create the famous iMessage app from Apple with the StreamChatSwiftUI SDK and SwiftUI.
