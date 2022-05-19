@@ -15,7 +15,56 @@ struct iMessageCloneApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewFactory: iMessageViewFactory())
+            TestStreamTabs()
+        }
+    }
+}
+
+struct TestStreamTabs: View {
+    var body: some View {
+        TabView {
+            TabOneView()
+                .tabItem {
+                    Label("Menu", systemImage: "list.dash")
+                }
+            
+            TabTwoView()
+                .tabItem {
+                    Label("Order", systemImage: "square.and.pencil")
+                }
+        }
+    }
+}
+
+struct TabOneView: View {
+    var body: some View {
+        NavigationView{
+            VStack{
+                Text("Test Tab One")
+            }
+        }
+    }
+}
+
+struct TabTwoView: View {
+    var body: some View {
+        NavigationView{
+            VStack{
+                Text("Test Tab Two")
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack{
+                        Spacer()
+                        NavigationLink(destination: ContentView(factory: iMessageViewFactory())) {
+                            
+                            Image(systemName: "envelope")
+                                .imageScale(.large)
+                        }
+                    }
+                    
+                }
+            }
         }
     }
 }
