@@ -17,7 +17,7 @@
 		AC5277E727AC2CBE0065A092 /* iMessageChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5277E627AC2CBE0065A092 /* iMessageChannelListViewModel.swift */; };
 		AC5277EA27AC45620065A092 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = AC5277E927AC45620065A092 /* OrderedCollections */; };
 		AC9B379827A46350004765A9 /* iMessageCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B379727A46350004765A9 /* iMessageCloneApp.swift */; };
-		AC9B379A27A46350004765A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B379927A46350004765A9 /* ContentView.swift */; };
+		AC9B379A27A46350004765A9 /* iMessageChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B379927A46350004765A9 /* iMessageChannelList.swift */; };
 		AC9B379C27A46351004765A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9B379B27A46351004765A9 /* Assets.xcassets */; };
 		AC9B379F27A46351004765A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9B379E27A46351004765A9 /* Preview Assets.xcassets */; };
 		AC9B37A727A46526004765A9 /* StreamChatSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AC9B37A627A46526004765A9 /* StreamChatSwiftUI */; };
@@ -36,7 +36,7 @@
 		AC5277E627AC2CBE0065A092 /* iMessageChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageChannelListViewModel.swift; sourceTree = "<group>"; };
 		AC9B379427A46350004765A9 /* iMessageClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9B379727A46350004765A9 /* iMessageCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageCloneApp.swift; sourceTree = "<group>"; };
-		AC9B379927A46350004765A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AC9B379927A46350004765A9 /* iMessageChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageChannelList.swift; sourceTree = "<group>"; };
 		AC9B379B27A46351004765A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC9B379E27A46351004765A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC9B37A827A466EE004765A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,20 +75,11 @@
 		AC9B379627A46350004765A9 /* iMessageClone */ = {
 			isa = PBXGroup;
 			children = (
-				AC9B37A827A466EE004765A9 /* AppDelegate.swift */,
-				AC9B37AA27A4677C004765A9 /* iMessageViewFactory.swift */,
+				ACD129C62857264D007E6B97 /* StreamChat */,
+				ACD129C32857261D007E6B97 /* ChannelList */,
 				AC9B379727A46350004765A9 /* iMessageCloneApp.swift */,
-				AC9B379927A46350004765A9 /* ContentView.swift */,
 				AC9B379B27A46351004765A9 /* Assets.xcassets */,
 				AC9B379D27A46351004765A9 /* Preview Content */,
-				AC02EB4A27A95CED001C4480 /* iMessageChannelListHeader.swift */,
-				AC02EB4C27A95D7C001C4480 /* iMessageChannelListHeaderModifier.swift */,
-				AC5277D827AA84E80065A092 /* iMessageChannelListItemView.swift */,
-				AC5277DC27AB0D510065A092 /* iMessageChannelListItem.swift */,
-				AC5277E227AC29010065A092 /* LeadingSwipeAreaView.swift */,
-				AC5277E427AC29C60065A092 /* TrailingSwipeAreaView.swift */,
-				AC5277E627AC2CBE0065A092 /* iMessageChannelListViewModel.swift */,
-				AC4A633B27AC473F00237420 /* PinnedChannelsView.swift */,
 			);
 			path = iMessageClone;
 			sourceTree = "<group>";
@@ -99,6 +90,71 @@
 				AC9B379E27A46351004765A9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACD129C32857261D007E6B97 /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				ACD129C528572631007E6B97 /* ViewModel */,
+				ACD129C42857262A007E6B97 /* View */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
+		ACD129C42857262A007E6B97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACD129C8285727C6007E6B97 /* ChannelHeader */,
+				ACD129C7285727B4007E6B97 /* ChannelList */,
+				ACD129C9285727CD007E6B97 /* ChannelListItem */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACD129C528572631007E6B97 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC5277E627AC2CBE0065A092 /* iMessageChannelListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACD129C62857264D007E6B97 /* StreamChat */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B37A827A466EE004765A9 /* AppDelegate.swift */,
+				AC9B37AA27A4677C004765A9 /* iMessageViewFactory.swift */,
+			);
+			path = StreamChat;
+			sourceTree = "<group>";
+		};
+		ACD129C7285727B4007E6B97 /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B379927A46350004765A9 /* iMessageChannelList.swift */,
+				AC5277E227AC29010065A092 /* LeadingSwipeAreaView.swift */,
+				AC4A633B27AC473F00237420 /* PinnedChannelsView.swift */,
+				AC5277E427AC29C60065A092 /* TrailingSwipeAreaView.swift */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
+		ACD129C8285727C6007E6B97 /* ChannelHeader */ = {
+			isa = PBXGroup;
+			children = (
+				AC02EB4A27A95CED001C4480 /* iMessageChannelListHeader.swift */,
+				AC02EB4C27A95D7C001C4480 /* iMessageChannelListHeaderModifier.swift */,
+			);
+			path = ChannelHeader;
+			sourceTree = "<group>";
+		};
+		ACD129C9285727CD007E6B97 /* ChannelListItem */ = {
+			isa = PBXGroup;
+			children = (
+				AC5277DC27AB0D510065A092 /* iMessageChannelListItem.swift */,
+				AC5277D827AA84E80065A092 /* iMessageChannelListItemView.swift */,
+			);
+			path = ChannelListItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +241,7 @@
 				AC5277E527AC29C60065A092 /* TrailingSwipeAreaView.swift in Sources */,
 				AC9B37AB27A4677C004765A9 /* iMessageViewFactory.swift in Sources */,
 				AC5277DD27AB0D510065A092 /* iMessageChannelListItem.swift in Sources */,
-				AC9B379A27A46350004765A9 /* ContentView.swift in Sources */,
+				AC9B379A27A46350004765A9 /* iMessageChannelList.swift in Sources */,
 				AC5277D927AA84E80065A092 /* iMessageChannelListItemView.swift in Sources */,
 				AC5277E727AC2CBE0065A092 /* iMessageChannelListViewModel.swift in Sources */,
 				AC9B379827A46350004765A9 /* iMessageCloneApp.swift in Sources */,
@@ -407,8 +463,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/getstream/stream-chat-swiftui";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.16.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

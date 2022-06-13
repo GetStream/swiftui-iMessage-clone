@@ -15,7 +15,7 @@ struct iMessageCloneApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewFactory: iMessageViewFactory())
+            iMessageChannelList(viewFactory: iMessageViewFactory())
         }
     }
 }

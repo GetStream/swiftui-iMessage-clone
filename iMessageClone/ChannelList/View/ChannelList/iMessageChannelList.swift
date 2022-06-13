@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  iMessageChannelList.swift
 //  iMessageClone
 //
 //  Created by Stefan Blos on 28.01.22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import StreamChatSwiftUI
 
-struct ContentView: View {
+struct iMessageChannelList: View {
     
     @StateObject var viewModel = iMessageChannelListViewModel()
     @StateObject var channelHeaderLoader = ChannelHeaderLoader()
@@ -65,6 +65,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewFactory: iMessageViewFactory())
+        iMessageChannelList(viewFactory: iMessageViewFactory())
     }
 }
