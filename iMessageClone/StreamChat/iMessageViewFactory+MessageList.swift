@@ -21,4 +21,12 @@ extension iMessageViewFactory {
         }
         return iMessageMessageView(message: message.text, isCurrentUser: userId == message.author.id, isFirst: isFirst)
     }
+    
+    func makeMessageDateView(for message: ChatMessage) -> some View {
+        EmptyView()
+    }
+    
+    func makeMessageReadIndicatorView(channel: ChatChannel, message: ChatMessage) -> some View {
+        EmptyView()
+    }
 }
