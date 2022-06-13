@@ -407,8 +407,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/getstream/stream-chat-swiftui";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.16.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
