@@ -104,14 +104,9 @@
 		ACD129C42857262A007E6B97 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC9B379927A46350004765A9 /* iMessageChannelList.swift */,
-				AC02EB4A27A95CED001C4480 /* iMessageChannelListHeader.swift */,
-				AC02EB4C27A95D7C001C4480 /* iMessageChannelListHeaderModifier.swift */,
-				AC5277DC27AB0D510065A092 /* iMessageChannelListItem.swift */,
-				AC5277D827AA84E80065A092 /* iMessageChannelListItemView.swift */,
-				AC5277E227AC29010065A092 /* LeadingSwipeAreaView.swift */,
-				AC4A633B27AC473F00237420 /* PinnedChannelsView.swift */,
-				AC5277E427AC29C60065A092 /* TrailingSwipeAreaView.swift */,
+				ACD129C8285727C6007E6B97 /* ChannelHeader */,
+				ACD129C7285727B4007E6B97 /* ChannelList */,
+				ACD129C9285727CD007E6B97 /* ChannelListItem */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +126,35 @@
 				AC9B37AA27A4677C004765A9 /* iMessageViewFactory.swift */,
 			);
 			path = StreamChat;
+			sourceTree = "<group>";
+		};
+		ACD129C7285727B4007E6B97 /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B379927A46350004765A9 /* iMessageChannelList.swift */,
+				AC5277E227AC29010065A092 /* LeadingSwipeAreaView.swift */,
+				AC4A633B27AC473F00237420 /* PinnedChannelsView.swift */,
+				AC5277E427AC29C60065A092 /* TrailingSwipeAreaView.swift */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
+		ACD129C8285727C6007E6B97 /* ChannelHeader */ = {
+			isa = PBXGroup;
+			children = (
+				AC02EB4A27A95CED001C4480 /* iMessageChannelListHeader.swift */,
+				AC02EB4C27A95D7C001C4480 /* iMessageChannelListHeaderModifier.swift */,
+			);
+			path = ChannelHeader;
+			sourceTree = "<group>";
+		};
+		ACD129C9285727CD007E6B97 /* ChannelListItem */ = {
+			isa = PBXGroup;
+			children = (
+				AC5277DC27AB0D510065A092 /* iMessageChannelListItem.swift */,
+				AC5277D827AA84E80065A092 /* iMessageChannelListItemView.swift */,
+			);
+			path = ChannelListItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
