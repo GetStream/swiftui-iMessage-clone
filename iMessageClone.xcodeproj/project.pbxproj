@@ -23,6 +23,7 @@
 		AC9B37A727A46526004765A9 /* StreamChatSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AC9B37A627A46526004765A9 /* StreamChatSwiftUI */; };
 		AC9B37A927A466EE004765A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B37A827A466EE004765A9 /* AppDelegate.swift */; };
 		AC9B37AB27A4677C004765A9 /* iMessageViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B37AA27A4677C004765A9 /* iMessageViewFactory.swift */; };
+		ACD129CB2857328A007E6B97 /* iMessageViewFactory+ChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD129CA2857328A007E6B97 /* iMessageViewFactory+ChannelList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		AC9B379E27A46351004765A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC9B37A827A466EE004765A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC9B37AA27A4677C004765A9 /* iMessageViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageViewFactory.swift; sourceTree = "<group>"; };
+		ACD129CA2857328A007E6B97 /* iMessageViewFactory+ChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iMessageViewFactory+ChannelList.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			children = (
 				AC9B37A827A466EE004765A9 /* AppDelegate.swift */,
 				AC9B37AA27A4677C004765A9 /* iMessageViewFactory.swift */,
+				ACD129CA2857328A007E6B97 /* iMessageViewFactory+ChannelList.swift */,
 			);
 			path = StreamChat;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				AC5277E327AC29010065A092 /* LeadingSwipeAreaView.swift in Sources */,
 				AC9B37A927A466EE004765A9 /* AppDelegate.swift in Sources */,
 				AC5277E527AC29C60065A092 /* TrailingSwipeAreaView.swift in Sources */,
+				ACD129CB2857328A007E6B97 /* iMessageViewFactory+ChannelList.swift in Sources */,
 				AC9B37AB27A4677C004765A9 /* iMessageViewFactory.swift in Sources */,
 				AC5277DD27AB0D510065A092 /* iMessageChannelListItem.swift in Sources */,
 				AC9B379A27A46350004765A9 /* iMessageChannelList.swift in Sources */,
