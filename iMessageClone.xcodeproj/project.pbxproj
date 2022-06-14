@@ -26,6 +26,7 @@
 		ACD129CB2857328A007E6B97 /* iMessageViewFactory+ChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD129CA2857328A007E6B97 /* iMessageViewFactory+ChannelList.swift */; };
 		ACD129CD28573347007E6B97 /* iMessageViewFactory+MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD129CC28573347007E6B97 /* iMessageViewFactory+MessageList.swift */; };
 		ACD129D1285734A7007E6B97 /* iMessageMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD129D0285734A7007E6B97 /* iMessageMessageView.swift */; };
+		ACEF0D802857631E006056CD /* iMessageLeadingComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF0D7F2857631E006056CD /* iMessageLeadingComposerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		ACD129CA2857328A007E6B97 /* iMessageViewFactory+ChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iMessageViewFactory+ChannelList.swift"; sourceTree = "<group>"; };
 		ACD129CC28573347007E6B97 /* iMessageViewFactory+MessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iMessageViewFactory+MessageList.swift"; sourceTree = "<group>"; };
 		ACD129D0285734A7007E6B97 /* iMessageMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageMessageView.swift; sourceTree = "<group>"; };
+		ACEF0D7F2857631E006056CD /* iMessageLeadingComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageLeadingComposerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,9 +179,18 @@
 		ACD129CF2857348D007E6B97 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ACD129D228576267007E6B97 /* Composer */,
 				ACD129D0285734A7007E6B97 /* iMessageMessageView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ACD129D228576267007E6B97 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				ACEF0D7F2857631E006056CD /* iMessageLeadingComposerView.swift */,
+			);
+			path = Composer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 				AC4A633C27AC473F00237420 /* PinnedChannelsView.swift in Sources */,
 				AC5277E327AC29010065A092 /* LeadingSwipeAreaView.swift in Sources */,
 				AC9B37A927A466EE004765A9 /* AppDelegate.swift in Sources */,
+				ACEF0D802857631E006056CD /* iMessageLeadingComposerView.swift in Sources */,
 				AC5277E527AC29C60065A092 /* TrailingSwipeAreaView.swift in Sources */,
 				ACD129CB2857328A007E6B97 /* iMessageViewFactory+ChannelList.swift in Sources */,
 				ACD129CD28573347007E6B97 /* iMessageViewFactory+MessageList.swift in Sources */,
@@ -408,6 +420,7 @@
 				DEVELOPMENT_TEAM = JY49624W8T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "For sending photos to other people we need access to your photos first.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,6 +450,7 @@
 				DEVELOPMENT_TEAM = JY49624W8T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "For sending photos to other people we need access to your photos first.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

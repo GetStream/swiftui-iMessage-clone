@@ -29,4 +29,11 @@ extension iMessageViewFactory {
     func makeMessageReadIndicatorView(channel: ChatChannel, message: ChatMessage) -> some View {
         EmptyView()
     }
+    
+    func makeLeadingComposerView(
+        state: Binding<PickerTypeState>,
+        channelConfig: ChannelConfig?
+    ) -> some View {
+        iMessageLeadingComposerView(pickerTypeState: state)
+    }
 }

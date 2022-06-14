@@ -32,9 +32,7 @@ struct iMessageMessageView: View {
                         .renderingMode(.template)
                         .foregroundStyle(isCurrentUser ? .blue : grayBackgroundColor)
                     : nil
-                    
                 }
-        
     }
 }
 
