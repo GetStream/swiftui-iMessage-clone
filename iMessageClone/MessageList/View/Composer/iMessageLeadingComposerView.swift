@@ -28,7 +28,6 @@ struct iMessageLeadingComposerView: View {
                             .scaledToFit()
                             .frame(height: 22)
                             .foregroundColor(.gray)
-                            .padding(.vertical, 8)
                     }
                     
                     Button {
@@ -41,10 +40,10 @@ struct iMessageLeadingComposerView: View {
                             .scaledToFit()
                             .frame(height: 24)
                             .foregroundColor(.primary)
-                            .padding(.vertical, 8)
                     }
                 }
                 .padding(.horizontal, 8)
+                .frame(maxHeight: 32)
             case .media:
                 closeButton()
             case .instantCommands:
@@ -74,6 +73,7 @@ struct iMessageLeadingComposerView: View {
             
             Spacer()
         }
+        .frame(maxHeight: 40)
     }
 }
 
@@ -85,9 +85,16 @@ struct iMessageLeadingComposerView_Previews: PreviewProvider {
         iMessageLeadingComposerView(pickerTypeState: .constant(.expanded(.custom)))
             .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/400.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
         
-        iMessageLeadingComposerView(pickerTypeState: .constant(.collapsed))
-            .preferredColorScheme(.dark)
-            .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/400.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
+        HStack(alignment: .bottom) {
+            iMessageLeadingComposerView(pickerTypeState: .constant(.expanded(.none)))
+            
+            Capsule()
+                .stroke(.gray, lineWidth: 2)
+                .frame(maxHeight: 50)
+            
+        }
+        .preferredColorScheme(.dark)
+        .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/400.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
         
         iMessageLeadingComposerView(pickerTypeState: .constant(.expanded(.custom)))
             .preferredColorScheme(.dark)
