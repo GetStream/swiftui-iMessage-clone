@@ -71,4 +71,8 @@ extension iMessageViewFactory {
                 .createNewMessage(text: message)
         }
     }
+    
+    func makeChannelHeaderViewModifier(for channel: ChatChannel) -> iMessageMessageListHeaderModifier {
+        iMessageMessageListHeaderModifier(channel: channel)
+    }
 }

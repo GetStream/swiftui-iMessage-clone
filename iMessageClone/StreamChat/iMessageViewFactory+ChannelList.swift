@@ -33,9 +33,11 @@ extension iMessageViewFactory {
             channelName: channelName,
             avatar: avatar,
             channelDestination: channelDestination,
-            onItemTap: onItemTap,
             selectedChannel: selectedChannel
-        )
+        ) { chatChannel in
+            self.channelId = chatChannel.cid
+            onItemTap(chatChannel)
+        }
         
         return ChatChannelSwipeableListItem<iMessageViewFactory, iMessageChannelListItem>(
             factory: self,

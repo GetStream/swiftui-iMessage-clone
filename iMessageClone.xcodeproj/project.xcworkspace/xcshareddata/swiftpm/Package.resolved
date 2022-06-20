@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/getstream/stream-chat-swiftui",
       "state" : {
-        "branch" : "imessage-clone",
-        "revision" : "35c5f5fce0d8fdfbdcb8c590c35b10c9529978a5"
+        "revision" : "0f9936d1fd4961c47b7b0416b3c5e7b26cef17f3",
+        "version" : "4.16.0"
       }
     },
     {
