@@ -11,6 +11,7 @@ import StreamChat
 struct iMessageMessageListHeader: ToolbarContent {
     
     @ObservedObject var viewModel: iMessageMessageListHeaderViewModel
+    @Binding var isInfoSheetShown: Bool
     @Binding var isVideoSheetShown: Bool
     
     private let headerSize: CGFloat = 26
@@ -18,7 +19,7 @@ struct iMessageMessageListHeader: ToolbarContent {
     var body: some ToolbarContent {
         ToolbarItem(placement: .principal) {
             Button {
-                //
+                isInfoSheetShown = true
             } label: {
                 VStack(spacing: 4) {
                     if let headerImage = viewModel.headerImage {
@@ -30,12 +31,12 @@ struct iMessageMessageListHeader: ToolbarContent {
                             .fill(.cyan)
                             .frame(width: headerSize, height: headerSize)
                     }
-                    
+
                     HStack(alignment: .firstTextBaseline, spacing: 2) {
                         Text(viewModel.channelName ?? "Unknown")
                             .font(.caption)
                             .foregroundColor(.primary)
-                        
+
                         Image(systemName: "chevron.right")
                             .resizable()
                             .scaledToFit()
@@ -44,10 +45,8 @@ struct iMessageMessageListHeader: ToolbarContent {
                     }
                 }
             }
-
-            
         }
-        
+
         ToolbarItem(placement: .navigationBarTrailing) {
             Button {
                 isVideoSheetShown = true
