@@ -75,4 +75,18 @@ extension iMessageViewFactory {
     func makeChannelHeaderViewModifier(for channel: ChatChannel) -> iMessageMessageListHeaderModifier {
         iMessageMessageListHeaderModifier(channel: channel)
     }
+    
+    func makeLinkAttachmentView(for message: ChatMessage, isFirst: Bool, availableWidth: CGFloat, scrolledId: Binding<String?>) -> some View {
+        ZStack {
+            if !message.linkAttachments.isEmpty {
+                iMessageLinkView(
+                    linkAttachment: message.linkAttachments[0],
+                    width: availableWidth,
+                    isFirst: isFirst
+                )
+            } else {
+                Text("Link not available")
+            }
+        }
+    }
 }
