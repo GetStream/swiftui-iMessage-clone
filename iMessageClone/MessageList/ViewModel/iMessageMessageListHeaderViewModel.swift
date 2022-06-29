@@ -11,18 +11,14 @@ import StreamChatSwiftUI
 
 class iMessageMessageListHeaderViewModel: ObservableObject {
     
-    @StateObject private var channelHeaderLoader = ChannelHeaderLoader()
     @Injected(\.utils) var utils
     @Injected(\.chatClient) var chatClient
     
-    var headerImage: UIImage?
-    var channelName: String?
-    
-    var channel: ChatChannel
+    @Published var headerImage: UIImage?
+    @Published var channelName: String?
     
     init(channel: ChatChannel) {
-        self.channel = channel
-        headerImage = channelHeaderLoader.image(for: channel)
+        headerImage = ChannelHeaderLoader().image(for: channel)
         channelName = utils.channelNamer(channel, chatClient.currentUserId ?? "")
     }
     
