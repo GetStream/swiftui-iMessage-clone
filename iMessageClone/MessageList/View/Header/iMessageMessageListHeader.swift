@@ -14,7 +14,7 @@ struct iMessageMessageListHeader: ToolbarContent {
     @Binding var isInfoSheetShown: Bool
     @Binding var isVideoSheetShown: Bool
     
-    private let headerSize: CGFloat = 26
+    private let headerSize: CGFloat = 20
     
     var body: some ToolbarContent {
         ToolbarItem(placement: .principal) {
@@ -44,6 +44,7 @@ struct iMessageMessageListHeader: ToolbarContent {
                             .foregroundColor(.secondary)
                     }
                 }
+                .padding(.bottom, 6)
             }
         }
 
