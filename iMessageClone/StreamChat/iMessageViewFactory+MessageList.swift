@@ -36,4 +36,42 @@ extension iMessageViewFactory {
         EmptyView()
     }
     
+    func makeComposerInputView(
+         text: Binding<String>,
+         selectedRangeLocation: Binding<Int>,
+         command: Binding<ComposerCommand?>,
+         addedAssets: [AddedAsset],
+         addedFileURLs: [URL],
+         addedCustomAttachments: [CustomAttachment],
+         quotedMessage: Binding<ChatMessage?>,
+         maxMessageLength: Int?,
+         cooldownDuration: Int,
+         onCustomAttachmentTap: @escaping (CustomAttachment) -> Void,
+         shouldScroll: Bool,
+         removeAttachmentWithId: @escaping (String) -> Void
+     ) -> some View {
+         ComposerInputView(input: text) { [unowned self] message in
+             guard let channelId = channelId else {
+                 return
+             }
+             
+             chatClient
+                 .channelController(for: channelId)
+                 .createNewMessage(text: message)
+         }
+     }
+    
+    func makeLeadingComposerView(
+        state: Binding<PickerTypeState>,
+        channelConfig: ChannelConfig?) -> some View {
+        LeadingComposerView(pickerTypeState: state)
+    }
+    
+    func makeTrailingComposerView(
+        enabled: Bool,
+        cooldownDuration: Int,
+        onTap: @escaping () -> Void
+    ) -> some View {
+        EmptyView()
+    }
 }

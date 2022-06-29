@@ -15,8 +15,8 @@ struct iMessageChannelListItem: View {
     let channelName: String
     let avatar: UIImage
     let channelDestination: (ChannelSelectionInfo) -> ChatChannelView<iMessageViewFactory>
-    let onItemTap: (ChatChannel) -> Void
     @Binding var selectedChannel: ChannelSelectionInfo?
+    let onItemTap: (ChatChannel) -> Void
     
     var body: some View {
         ZStack {

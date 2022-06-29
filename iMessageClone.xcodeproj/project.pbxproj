@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AC02EB4B27A95CED001C4480 /* iMessageChannelListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC02EB4A27A95CED001C4480 /* iMessageChannelListHeader.swift */; };
 		AC02EB4D27A95D7C001C4480 /* iMessageChannelListHeaderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC02EB4C27A95D7C001C4480 /* iMessageChannelListHeaderModifier.swift */; };
+		AC24F7C0286C8F30009FBF7E /* LeadingComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24F7BF286C8F30009FBF7E /* LeadingComposerView.swift */; };
+		AC24F7C2286C98DE009FBF7E /* ComposerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24F7C1286C98DE009FBF7E /* ComposerInputView.swift */; };
 		AC4A633C27AC473F00237420 /* PinnedChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4A633B27AC473F00237420 /* PinnedChannelsView.swift */; };
 		AC5277D927AA84E80065A092 /* iMessageChannelListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5277D827AA84E80065A092 /* iMessageChannelListItemView.swift */; };
 		AC5277DD27AB0D510065A092 /* iMessageChannelListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5277DC27AB0D510065A092 /* iMessageChannelListItem.swift */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		AC02EB4A27A95CED001C4480 /* iMessageChannelListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageChannelListHeader.swift; sourceTree = "<group>"; };
 		AC02EB4C27A95D7C001C4480 /* iMessageChannelListHeaderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageChannelListHeaderModifier.swift; sourceTree = "<group>"; };
+		AC24F7BF286C8F30009FBF7E /* LeadingComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingComposerView.swift; sourceTree = "<group>"; };
+		AC24F7C1286C98DE009FBF7E /* ComposerInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerInputView.swift; sourceTree = "<group>"; };
 		AC4A633B27AC473F00237420 /* PinnedChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedChannelsView.swift; sourceTree = "<group>"; };
 		AC5277D827AA84E80065A092 /* iMessageChannelListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageChannelListItemView.swift; sourceTree = "<group>"; };
 		AC5277DC27AB0D510065A092 /* iMessageChannelListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageChannelListItem.swift; sourceTree = "<group>"; };
@@ -68,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC24F7BE286C8F23009FBF7E /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				AC24F7BF286C8F30009FBF7E /* LeadingComposerView.swift */,
+				AC24F7C1286C98DE009FBF7E /* ComposerInputView.swift */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
 		AC65D05B286C58F900E01779 /* MessageList */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +93,7 @@
 		AC65D05C286C590400E01779 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC24F7BE286C8F23009FBF7E /* Composer */,
 				AC65D069286C73D400E01779 /* Message */,
 				AC65D062286C5B8300E01779 /* Header */,
 			);
@@ -298,9 +312,11 @@
 				AC9B37A927A466EE004765A9 /* AppDelegate.swift in Sources */,
 				AC65D066286C5D9F00E01779 /* MessageListHeaderModifier.swift in Sources */,
 				AC5277E527AC29C60065A092 /* TrailingSwipeAreaView.swift in Sources */,
+				AC24F7C2286C98DE009FBF7E /* ComposerInputView.swift in Sources */,
 				AC65D05A286C521600E01779 /* iMessageViewFactory+ChannelList.swift in Sources */,
 				AC65D068286C5F3700E01779 /* iMessageViewFactory+MessageList.swift in Sources */,
 				AC9B37AB27A4677C004765A9 /* iMessageViewFactory.swift in Sources */,
+				AC24F7C0286C8F30009FBF7E /* LeadingComposerView.swift in Sources */,
 				AC65D064286C5BA200E01779 /* MessageListHeader.swift in Sources */,
 				AC5277DD27AB0D510065A092 /* iMessageChannelListItem.swift in Sources */,
 				AC9B379A27A46350004765A9 /* iMessageChannelList.swift in Sources */,
@@ -444,6 +460,7 @@
 				DEVELOPMENT_TEAM = JY49624W8T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "In order to send images we need to access them.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -473,6 +490,7 @@
 				DEVELOPMENT_TEAM = JY49624W8T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "In order to send images we need to access them.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
