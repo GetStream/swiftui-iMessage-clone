@@ -16,6 +16,7 @@
 		AC5277E527AC29C60065A092 /* TrailingSwipeAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5277E427AC29C60065A092 /* TrailingSwipeAreaView.swift */; };
 		AC5277E727AC2CBE0065A092 /* iMessageChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5277E627AC2CBE0065A092 /* iMessageChannelListViewModel.swift */; };
 		AC5277EA27AC45620065A092 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = AC5277E927AC45620065A092 /* OrderedCollections */; };
+		AC65D05A286C521600E01779 /* iMessageViewFactory+ChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65D059286C521600E01779 /* iMessageViewFactory+ChannelList.swift */; };
 		AC9B379827A46350004765A9 /* iMessageCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B379727A46350004765A9 /* iMessageCloneApp.swift */; };
 		AC9B379A27A46350004765A9 /* iMessageChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B379927A46350004765A9 /* iMessageChannelList.swift */; };
 		AC9B379C27A46351004765A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9B379B27A46351004765A9 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		AC5277E227AC29010065A092 /* LeadingSwipeAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingSwipeAreaView.swift; sourceTree = "<group>"; };
 		AC5277E427AC29C60065A092 /* TrailingSwipeAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingSwipeAreaView.swift; sourceTree = "<group>"; };
 		AC5277E627AC2CBE0065A092 /* iMessageChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageChannelListViewModel.swift; sourceTree = "<group>"; };
+		AC65D059286C521600E01779 /* iMessageViewFactory+ChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iMessageViewFactory+ChannelList.swift"; sourceTree = "<group>"; };
 		AC9B379427A46350004765A9 /* iMessageClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9B379727A46350004765A9 /* iMessageCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageCloneApp.swift; sourceTree = "<group>"; };
 		AC9B379927A46350004765A9 /* iMessageChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageChannelList.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				AC9B37A827A466EE004765A9 /* AppDelegate.swift */,
 				AC9B37AA27A4677C004765A9 /* iMessageViewFactory.swift */,
+				AC65D059286C521600E01779 /* iMessageViewFactory+ChannelList.swift */,
 			);
 			path = StreamChat;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				AC5277E327AC29010065A092 /* LeadingSwipeAreaView.swift in Sources */,
 				AC9B37A927A466EE004765A9 /* AppDelegate.swift in Sources */,
 				AC5277E527AC29C60065A092 /* TrailingSwipeAreaView.swift in Sources */,
+				AC65D05A286C521600E01779 /* iMessageViewFactory+ChannelList.swift in Sources */,
 				AC9B37AB27A4677C004765A9 /* iMessageViewFactory.swift in Sources */,
 				AC5277DD27AB0D510065A092 /* iMessageChannelListItem.swift in Sources */,
 				AC9B379A27A46350004765A9 /* iMessageChannelList.swift in Sources */,
