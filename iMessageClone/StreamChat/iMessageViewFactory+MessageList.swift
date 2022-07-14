@@ -37,35 +37,35 @@ extension iMessageViewFactory {
     }
     
     func makeComposerInputView(
-         text: Binding<String>,
-         selectedRangeLocation: Binding<Int>,
-         command: Binding<ComposerCommand?>,
-         addedAssets: [AddedAsset],
-         addedFileURLs: [URL],
-         addedCustomAttachments: [CustomAttachment],
-         quotedMessage: Binding<ChatMessage?>,
-         maxMessageLength: Int?,
-         cooldownDuration: Int,
-         onCustomAttachmentTap: @escaping (CustomAttachment) -> Void,
-         shouldScroll: Bool,
-         removeAttachmentWithId: @escaping (String) -> Void
-     ) -> some View {
-         ComposerInputView(input: text) { [unowned self] message in
-             guard let channelId = channelId else {
-                 return
-             }
-             
-             chatClient
-                 .channelController(for: channelId)
-                 .createNewMessage(text: message)
-         }
-     }
+        text: Binding<String>,
+        selectedRangeLocation: Binding<Int>,
+        command: Binding<ComposerCommand?>,
+        addedAssets: [AddedAsset],
+        addedFileURLs: [URL],
+        addedCustomAttachments: [CustomAttachment],
+        quotedMessage: Binding<ChatMessage?>,
+        maxMessageLength: Int?,
+        cooldownDuration: Int,
+        onCustomAttachmentTap: @escaping (CustomAttachment) -> Void,
+        shouldScroll: Bool,
+        removeAttachmentWithId: @escaping (String) -> Void
+    ) -> some View {
+        ComposerInputView(input: text) { [unowned self] message in
+            guard let channelId = channelId else {
+                return
+            }
+            
+            chatClient
+                .channelController(for: channelId)
+                .createNewMessage(text: message)
+        }
+    }
     
     func makeLeadingComposerView(
         state: Binding<PickerTypeState>,
         channelConfig: ChannelConfig?) -> some View {
-        LeadingComposerView(pickerTypeState: state)
-    }
+            LeadingComposerView(pickerTypeState: state)
+        }
     
     func makeTrailingComposerView(
         enabled: Bool,
@@ -73,5 +73,20 @@ extension iMessageViewFactory {
         onTap: @escaping () -> Void
     ) -> some View {
         EmptyView()
+    }
+    
+    func makeLinkAttachmentView(
+        for message: ChatMessage,
+        isFirst: Bool,
+        availableWidth: CGFloat,
+        scrolledId: Binding<String?>
+    ) -> some View {
+        ZStack {
+            if message.linkAttachments.isEmpty {
+                Text("Link not available")
+            } else {
+                LinkView(linkAttachment: message.linkAttachments[0], width: availableWidth)
+            }
+        }
     }
 }
