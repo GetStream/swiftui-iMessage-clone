@@ -6,8 +6,8 @@ This repository contains the source code of the tutorial series on how to re-cre
 
 It was created as a best-practice repository that showcases some of the best ways to customize the SDK and bring in your own style. There is a number of ongoing tutorials associated with this topic that are shown below with their current state:
 
-* [Youtube Tutorial on creating the Channel List]() (*published*)
-* Youtube Tutorial on creating the Message List (*in work*)
+* [Youtube Tutorial on creating the Channel List](https://youtu.be/526swCwDMX8) (*published*)
+* [Youtube Tutorial on creating the Message List](https://youtu.be/8Nkmk85H8HQ) (*published*)
 * Youtube Tutorial on implementing Custom Message Effects (*planned*)
 
 If you want to learn more about the SDK and to create your own Maker account and get started for free, head over to [getstream.io](https://getstream.io).
