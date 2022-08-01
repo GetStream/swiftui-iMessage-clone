@@ -6,11 +6,13 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
 import StreamChat
 import StreamChatSwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    @Injected(\.utils) var utils
     
     var streamChat: StreamChat?
     
